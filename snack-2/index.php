@@ -3,12 +3,12 @@ $userName = $_GET["name"];
 $userEmail = $_GET["mail"];
 $userAge = $_GET["age"];
 
-var_dump($userName);
-var_dump($userEmail);
-var_dump($userAge);
+var_dump(strlen($userName) > 3);
+var_dump(strpos($userEmail,"@") != false);
+var_dump(is_numeric($userAge));
 
 
-if((strlen($userName) > 3) && (strpos("@" && ".",$userEmail)) && (is_numeric($userAge)))
+if((strlen($userName) > 3) && (strpos($userEmail,"@") != false) && (is_numeric($userAge)))
 {
     echo "Ok";
 }
