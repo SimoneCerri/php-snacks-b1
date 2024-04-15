@@ -2,33 +2,31 @@
 
 $games =
 [
-    "home" => "Olimpia Milano",
-    "enemy" => "Cantù",
-    "home_point" => "55",
-    "enemy_point" => "60",
+    [
+        "home" => "Olimpia Milano",
+        "enemy" => "Cantù",
+        "home_point" => "55",
+        "enemy_point" => "60", 
+    ],
+    [
+        "home" => "Olimpia Catanzaro",
+        "enemy" => "Ciarlatani",
+        "home_point" => "5",
+        "enemy_point" => "0",
+    ],
+    [
+        "home" => "Booleani",
+        "enemy" => "Giangi",
+        "home_point" => "550",
+        "enemy_point" => "6",
+    ]
 ];
-/* [
-    "home" => "Olimpia Catanzaro",
-    "enemy" => "Ciarlatani",
-    "home_point" => "5",
-    "enemy_point" => "0",
-],
-[
-    "home" => "Booleani",
-    "enemy" => "Giangi",
-    "home_point" => "550",
-    "enemy_point" => "6",
-]; */
-
-var_dump("hello ?");
 
 var_dump($games);
 
-foreach ($games as $key => $value)
+foreach ($games as $game)
 {
-    echo $key . ": " . $value . "<br>";
-
-    /* echo $games[0]. "-" . $games[1] . " | " . $value[2] . "-" . $value[3]; */
+    echo $game["home"] . "-" . $game["enemy"] . " | " . $game["home_point"] . "-" . $game["enemy_point"] . "<br>";
 }
 
 ?>
